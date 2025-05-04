@@ -16,7 +16,7 @@ async function getData(id: string) {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const id = searchParams.get("id");
-
+    
   if (!id) return new Response('', { status: 400 }) // no id in url param
   if (isValid(id)) {
     let data = await getData(id);
