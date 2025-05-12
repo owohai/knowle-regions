@@ -1,7 +1,7 @@
 import { neon } from '@neondatabase/serverless';
 
 function isValid(id: string) {
-  const pattern = /^MW-[A-Z0-9]{6}$/;
+  const pattern = /^KW-\d{6}$/;
   return pattern.test(id);
 }
 
